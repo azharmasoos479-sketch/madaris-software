@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مدارس سافٹ ویئر — ایڈمن پینل</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#0b5136">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+</head>
+<body>
+<div id="loginView" class="login-wrap">
+  <form class="login-card" onsubmit="event.preventDefault();doLogin();">
+    <div class="login-logo">📖</div>
+    <h1>مدارس سافٹ ویئر</h1>
+    <p class="mut">اپنے اکاؤنٹ سے لاگ اِن کریں — ہر صارف کے اپنے ریکارڈز</p>
+    <label>ای میل<input id="loginEmail" type="email" required value="admin@madaris.pk" autocomplete="username"></label>
+    <label>پاس ورڈ<input id="loginPass" type="password" required value="admin123" autocomplete="current-password"></label>
+    <p id="loginErr" class="err"></p>
+    <button class="btn btn-primary w100" type="submit">لاگ اِن کریں</button>
+    <p class="login-hint">ڈیمو لاگ اِن — منتظم: admin@madaris.pk / admin123 · استاد: ustad@madaris.pk / ustad123 · محاسب: muhassib@madaris.pk / hisab123</p>
+    <a class="back" href="../index.html">← ویب سائٹ پر واپس</a>
+  </form>
+</div>
+
+<div id="appView" class="shell hidden">
+  <aside class="side">
+    <div class="brand">📖 <div><b>مدارس سافٹ ویئر</b><small id="sideSchool">—</small></div></div>
+    <nav id="sideNav"></nav>
+    <div class="side-foot">
+      <div class="user-chip"><div class="avatar">م</div><div><b id="userName">—</b><small id="userRole">—</small></div></div>
+      <button class="btn btn-sm btn-ghost" onclick="logout()">لاگ آؤٹ</button>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="btn btn-sm btn-ghost only-mobile" onclick="document.body.classList.toggle('nav-open')">☰</button>
+      <h2 id="pageTitle">ڈیش بورڈ</h2>
+      <div class="top-actions">
+        <span class="mut small" id="todayLabel"></span>
+        <a class="btn btn-sm btn-gold" href="../index.html">ویب سائٹ</a>
+      </div>
+    </header>
+    <section id="page"></section>
+  </main>
+</div>
+
+<a class="wa-float" target="_blank" href="https://wa.me/923462469006?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D9%85%D8%AC%DA%BE%DB%92%20%D9%85%D8%AF%D8%A7%D8%B1%D8%B3%20%D8%B3%D8%A7%D9%81%D9%B9%20%D9%88%DB%8C%D8%A6%D8%B1%20%D9%85%DB%8C%DA%BA%20%D9%85%D8%AF%D8%AF%20%DA%86%D8%A7%DB%81%DB%8C%DB%92" aria-label="WhatsApp" title="وٹس ایپ پر مدد">💬</a>
+<div id="modalRoot"></div>
+<div id="toast"></div>
+<script src="app.js"></script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('../sw.js').catch(function(){});}</script>
+</body>
+</html>

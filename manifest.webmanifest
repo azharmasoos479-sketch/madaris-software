@@ -1,0 +1,17 @@
+{
+  "name": "مدارس سافٹ ویئر — Madaris Software",
+  "short_name": "Madaris",
+  "description": "آن لائن مدرسہ منیجمنٹ سسٹم: طلبہ، حاضری، حفظ و ناظرہ، فیس، امتحانات، مالیات — رول بیسڈ صارفین کے ساتھ۔",
+  "lang": "ur",
+  "dir": "rtl",
+  "start_url": "app/",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#07301f",
+  "theme_color": "#0b5136",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

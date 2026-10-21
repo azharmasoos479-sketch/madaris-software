@@ -1,0 +1,1 @@
+{"description":"Madaris Software backend — zero-dependency Node.js server + REST API","engines":{"node":">=16"},"license":"MIT","main":"server.js","name":"smartschool-server","scripts":{"start":"node server.js"},"version":"1.0.0"}
